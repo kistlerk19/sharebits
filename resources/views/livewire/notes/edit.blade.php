@@ -34,7 +34,7 @@ new #[Layout('layouts.app')] class extends Component {
             'noteSendDate' => ['required', 'date'],
         ]);
 
-        auth()->user()->notes()->update([
+        $this->note->update([
             'title' => $this->noteTitle,
             'body' => $this->noteBody,
             'recipient' => $this->noteRecipient,

@@ -14,6 +14,7 @@ console_command = "php /var/www/html/artisan tinker"
 
 [env]
   APP_ENV = "production"
+  APP_NAME = "Sharebits"
   DB_CONNECTION = "pgsql"
   APP_URL = "https://sharebits.fly.dev"
   LOG_CHANNEL = "stderr"
