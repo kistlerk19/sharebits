@@ -41,6 +41,8 @@ new #[Layout('layouts.app')] class extends Component {
             'send_date' => $this->noteSendDate,
             'is_published' => $this->noteIsPublished,
         ]);
+
+        $this->dispatch('note-saved');
     }
 }; ?>
 <div>
@@ -55,6 +57,7 @@ new #[Layout('layouts.app')] class extends Component {
         <div class="max-w-2xl p-6 mx-auto text-gray-900 sm:px-6 lg:px-8">
             <form class="space-y-4" wire:submit='updateNote'>
                 <x-errors />
+                <x-action-message on="note-saved" class="text-white bg-indigo-300 rounded-full max-w-10"/>
                 <x-input wire:model='noteTitle' label='Title' placeholder='Enter the subject of your note' />
                 <x-textarea wire:model='noteBody' label='Body' placeholder="Write your note here..." rows="5"></x-textarea>
                 <x-input icon="user" wire:model='noteRecipient' type='mail' label='Recipient' placeholder="yourfriend@email.com"/>
