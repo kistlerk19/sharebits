@@ -29,17 +29,17 @@ new class extends Component {
         @if ($notes->isEmpty())
             <div class="text-center">
                 <p class="text-xl font-bold">
-                    No notes yet!
+                    no notes yet!
                 </p>
                 <p class="text-sm">
-                    Let's create your first note to share 😊.
+                    let's create your first note to share 😊.
                 </p>
                 <x-button primary icon="plus" class="mt-6 rounded-full" href="{{ route('notes.create') }}"
                     wire:navigate>add new note</x-button>
             </div>
         @else
         <x-button primary icon="plus" class="mt-6 mb-6 rounded-full" href="{{ route('notes.create') }}"
-                    wire:navigate>Create new note</x-button>
+                    wire:navigate>create new note</x-button>
             <div class="grid grid-cols-2 gap-4 mt-12">
                 @foreach ($notes as $note)
                     <x-card class="shadow-lg" wire:key='{{ $note->id }}'>

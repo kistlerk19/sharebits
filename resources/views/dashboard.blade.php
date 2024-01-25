@@ -10,7 +10,6 @@
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h1 class="text-4xl">Welcome to Sharebites</h1>
-                    <x-button info>Hello</x-button>
                 </div>
             </div>
         </div>
