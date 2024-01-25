@@ -19,6 +19,7 @@ new class extends Component {
     public function delete($noteID)
     {
         $note = Note::where('id', $noteID)->first();
+        $this->authorize('delete', $note);
         $note->delete();
     }
 }; ?>
