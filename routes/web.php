@@ -32,7 +32,7 @@ Volt::route('notes/{note}/edit', 'notes.edit')
     ->name('note.edit');
 
 Route::get('notes/{note}', function (Note $note) {
-    if($note->is_published)
+    if(!$note->is_published)
     {
         abort(404);
     }
